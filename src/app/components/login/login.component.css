@@ -1,0 +1,59 @@
+.loginSignInContainer {
+    border: 1px solid black;
+    width: 20rem;
+}
+
+.loginSignInTitle{
+    font-size: var(--title-size1);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.loginSignInForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.loginSignInContainer > hr {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.loginSignInForm > input, button {
+    width: 100%;
+    max-width: 100%;
+    height: 3rem;
+
+    border-radius: 3rem;
+}
+
+.loginSignInForm > input {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+
+    border: none;
+    border: 1px solid var(--primary-color);
+
+    font-size: var(--text-size1);
+}
+
+.loginSignInForm > button {
+    color: var(--primary-color);
+    font-size: var(--text-size2);
+    font-weight: bold;
+
+    border: none;
+    border: 2px solid var(--primary-color);
+}
+
+.loginSignInForm > button:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.loginOption {
+    text-align: center;
+}
