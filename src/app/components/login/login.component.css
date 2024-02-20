@@ -1,6 +1,8 @@
 .loginSignInContainer {
     border: 1px solid black;
     width: 20rem;
+
+    margin: auto
 }
 
 .loginSignInTitle{
@@ -18,7 +20,7 @@
 
 .loginSignInContainer > hr {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
 }
 
@@ -29,6 +31,7 @@
 
     border-radius: 3rem;
 }
+
 
 .loginSignInForm > input {
     padding-left: 1.2rem;

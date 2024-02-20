@@ -1,0 +1,32 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+}
+
+li {
+    border-bottom: 2px solid var(--primary-color);
+    padding: 0.5rem;
+
+}
+
+li:hover {
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+
+}
+
+nav {
+    display: flex;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: 5rem;
+}
