@@ -1,8 +1,8 @@
 <nav>
     <ul>
-        <a href=""><li>Home</li></a>
-        <a href=""><li>Articles</li></a>
-        <a href=""><li>About us</li></a>
+        <a routerLink="/home" [routerLinkActive]="['activeOption']"><li>Home</li></a>
+        <a routerLink="/articles" [routerLinkActive]="['activeOption']"><li>Articles</li></a>
+        <a routerLink="about-us" [routerLinkActive]="['activeOption']"><li>About us</li></a>
     </ul>
     <div class="searchContainer">
         <input type="text" placeholder="Search Here">

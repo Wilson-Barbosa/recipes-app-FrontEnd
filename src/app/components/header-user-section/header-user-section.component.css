@@ -1,0 +1,16 @@
+.container p:first-child {
+    border-right: 2px solid var(--white);
+}
+
+p {
+    display: inline;
+    padding: 0.3rem;
+}
+
+a {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+
+    letter-spacing: 0.8px;
+}
