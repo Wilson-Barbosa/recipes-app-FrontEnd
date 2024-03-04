@@ -1,0 +1,100 @@
+.registrationContainer {
+    display: flex;
+    border: 2px solid var(--gray);
+    border-radius: 15px;
+
+    box-shadow: 4px 4px 10px var(--gray);
+
+    margin-top: 2rem;
+    margin-left: 9rem;
+    margin-right: 9rem;
+}
+
+.registrationForm{
+    border-left: 2px solid var(--gray);
+
+    padding: 1.4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    max-width: 22rem;
+    min-width: 22rem;
+}
+
+.registrationForm:last-child{
+    text-align: center;
+}
+
+.logTitle {
+    font-size: var(--title2);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+p > span {
+    color: var(--secondary-color);
+}
+
+.inputContainer{
+    margin-top: 1.7rem;
+}
+
+.inputContainer > input, .inputContainer > small{
+    display: block;
+    width: 100%;
+}
+
+input, button {
+    border-radius: 2rem;
+    border-style: none;
+    border: 1.7px solid var(--primary-color);
+}
+
+input {
+    font-size: var(--text4);
+    padding: 0.8rem;
+}
+
+button {
+    font-size: var(--text2);
+    padding: 0.6rem;
+    width: 100%;
+
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+button:active{
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+hr{
+    margin-bottom: 1rem;
+}
+
+.option{
+    text-align: center;
+}
+
+
+/* ----------------------------------------------------------------------- */
+
+.sideContent {
+    background-color: var(--secondary-color2);
+
+    color: var(--primary-color);
+    width: 100%;
+
+    font-size: var(--title1);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sideContent > p {
+    text-align: center;
+}
+

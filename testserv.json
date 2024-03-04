@@ -1,0 +1,29 @@
+{
+  "login": [
+    {
+      "name": "wilson",
+      "email": "wilson@gmail.com",
+      "password": "@w795130w",
+      "repeatedPassword": "@w795130w",
+      "id": 1
+    },
+    {
+      "name": "teste",
+      "email": "teste01@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "name": "teste01",
+      "email": "wilson@gmail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "name": "wilsondbarbosa",
+      "email": "wilson@gmail.com.br",
+      "password": "123456",
+      "id": 4
+    }
+  ]
+}

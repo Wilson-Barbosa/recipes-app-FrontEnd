@@ -5,13 +5,17 @@
   --secondary-color2: #f4d2a1;
   --black: #000000;
   --white: #f8f8f8;
+  --gray: #a3a3a3;
 
-  --title-size1: 2.5rem;
-  --title-size2: 3rem;
+  --title1: 3rem;
+  --title2: 2.5rem;
+  --title3: 2rem;
 
-  --text-size1: 1rem;
-  --text-size2: 1.3rem;
-  --text-size3: 0.9rem;
+  --text1: 1rem;
+  --text2: 1.5rem;
+  --text3: 1.3rem;
+  --text4: 1.2rem;
+  --text5: 0.9rem;
 }
 
 /* Reseting the CSS */
@@ -26,89 +30,3 @@
 button:hover {
     cursor: pointer;
 }
-
-
-/* These are the CSS rulings for the Login and Sign in forms */
-/* Because they are very simliar I choose to make them global */
-.loginSignInContainer {
-    border: 1px solid var(--primary-color);
-    border-radius: 20px;
-
-    width: 21rem;
-
-    padding: 1.1rem;
-    margin: auto;
-}
-
-.loginSignInTitle{
-    font-size: var(--title-size1);
-    font-weight: bold;
-
-    color: var(--primary-color);
-
-    margin-bottom: 1.8rem;
-}
-
-.firstLetter{
-    font-size: var(--title-size2);
-    color: var(--secondary-color);
-}
-
-.loginSignInForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.loginSignInContainer > hr {
-    width: 100%;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.loginSignInForm > input, .loginSignInForm > button {
-    width: 100%;
-    max-width: 100%;
-    height: 3rem;
-
-    border-radius: 3rem;
-}
-
-.loginSignInForm > input {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-
-    border: none;
-    border: 1px solid var(--primary-color);
-
-    font-size: var(--text-size1);
-}
-
-.loginSignInForm > button {
-    color: var(--primary-color);
-    font-size: var(--text-size2);
-    font-weight: bold;
-
-    border: none;
-    border: 2px solid var(--primary-color);
-
-    color: var(--white);
-    background-color: var(--primary-color);
-}
-
-/* .loginSignInForm > button:hover {
-
-} */
-
-.loginSignInForm > button:active {
-    color: var(--primary-color);
-    background-color: var(--white);
-}
-
-.loginOption {
-    text-align: center;
-    font-size: var(--text-size3);
-}
-
-/* --------------------------------- ends here --------------------------------- */

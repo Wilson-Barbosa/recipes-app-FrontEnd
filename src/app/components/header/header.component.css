@@ -4,12 +4,12 @@ header {
     justify-content: space-around;
     align-items: center;
 
-    border: 1px solid black;
     width: 100vw;
     padding-top: 1rem;
     padding-bottom: 1rem;
 
     background-color: var(--primary-color);
+    box-shadow: 0px 5px 5px var(--gray);
 }
 
 h1, h2 {

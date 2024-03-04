@@ -1,11 +1,55 @@
-<section class="loginSignInContainer">
-    <p class="loginSignInTitle"><span class="firstLetter">S</span>ign In</p>
-    <form id="loginForm" class="loginSignInForm">
-        <input type="email" placeholder="email">
-        <input type="password" placeholder="password">
-        <input type="password" placeholder="repeat the password">
-        <button>Register</button>
-    </form>
-    <hr>
-    <p class="loginOption" >Do you have an account?<a routerLink="/login"> Log In</a></p>
-</section>
+<div class="registrationContainer">
+
+    <section class="registrationForm">
+        <p class="logTitle"><span>S</span>ign In</p>
+        <form id="loginForm" [formGroup]="signInFormGroup" (ngSubmit)="saveUser()">
+
+            <!-- Name input -->
+            <div class="inputContainer">
+                <input type="text" placeholder="name" formControlName="name" required>
+                <div *ngIf="signInFormGroup.invalid && registerWasClicked">
+                    <small *ngIf="name.errors?.['required']">Name is required</small>
+                    <small *ngIf="name.errors?.['minlength']">Must have at least 3 characters</small>
+                </div>
+            </div>
+
+            <!-- Email input -->
+            <div class="inputContainer">
+                <input type="email" placeholder="email" formControlName="email" required>
+                <div *ngIf="signInFormGroup.invalid && registerWasClicked">
+                    <small *ngIf="email.errors?.['required']">Email is required</small>
+                    <small *ngIf="email.errors?.['email']">Email format invalid</small>
+                </div>
+            </div>
+
+            <!-- Password input -->
+            <div class="inputContainer">
+                <input type="password" placeholder="password" formControlName="password" required>
+                <div *ngIf="signInFormGroup.invalid && registerWasClicked">
+                    <small *ngIf="password.errors?.['required']">Password is required</small>
+                    <small *ngIf="password.errors?.['minlength']">Must have at least 6 characters</small>
+                </div>
+            </div>
+
+            <!-- Repeated Password input -->
+            <div class="inputContainer">
+                <input type="password" placeholder="repeat password" formControlName="repeatedPassword" required>
+                <div *ngIf="signInFormGroup.invalid && registerWasClicked">
+                    <small *ngIf="!doPasswordsMatch()">Passwords don't match</small>
+                </div>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+        <hr>
+        <p class="option">Do you have an account?<a routerLink="/login"> Log In</a></p>
+    </section>
+
+    <section class="sideContent">
+        <p>Create your account</p>
+        <button>test</button>
+    </section>
+
+</div>
+
+
