@@ -1,0 +1,42 @@
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-top: 5rem;
+    padding: 1rem;
+
+    width: 100vw;
+
+    text-align: center;
+}
+
+p {
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+a {
+    color: var(--white);
+}
+
+i {
+    font-size: 1.5em;
+}
+
+hr {
+    width: 20rem;
+    margin: 1rem auto;
+    border-color: var(--secondary-color);
+}
+
+.socialMediaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socialMediaTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
