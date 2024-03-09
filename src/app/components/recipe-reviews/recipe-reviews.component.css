@@ -1,0 +1,53 @@
+section {
+    margin-top: 1rem;
+}
+
+.title {
+    color: var(--primary-color);
+
+    font-size: var(--title3);
+    font-size: bold;
+}
+
+hr {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.8rem;
+}
+
+button {
+    border: none;
+    background-color: var(--primary-color);
+
+    color: var(--white);
+    padding: 0.6rem;
+
+    margin-top: 0.8rem;
+}
+
+button:active {
+    background-color: var(--white);
+
+    color: var(--primary-color);
+}
+
+/* TODO this should be replaced with an on the template later */
+i {
+    font-size: 2.5rem;
+}
+
+.userReview {
+    margin-top: 2rem;
+}
+
+.userReview > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}

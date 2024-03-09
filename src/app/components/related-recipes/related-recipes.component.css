@@ -1,0 +1,34 @@
+aside {
+    color: var(--primary-color);
+    width: 22rem;
+}
+
+.relatedRecipesTitle {
+    border-bottom: 3px solid var(--secondary-color);
+
+    font-size: var(--title3);
+    font-weight: bold;
+
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
+
+    display: inline;
+}
+
+.recipeCard {
+    margin-top: 2rem;
+
+    display: flex;
+    gap: 0.5rem;
+}
+
+.foodImage {
+    width: 7rem;
+}
+
+.recipeCard > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.7rem;
+}

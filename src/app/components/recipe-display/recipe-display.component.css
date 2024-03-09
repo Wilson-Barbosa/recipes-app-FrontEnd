@@ -1,0 +1,105 @@
+article {
+    margin-right: 5rem;
+    margin-left: 5rem;
+
+    display: flex;
+    flex-direction: row;
+    /* TODO I need to fix this wrapping element later flex-wrap: wrap; */
+}
+
+.divider {
+    border: 1px solid var(--primary-color);
+    margin-left: 2.8rem;
+    margin-right: 2.8rem;
+}
+
+/* -------------- Recipe's image styling -------------- */
+.recipeImageContainer {
+    margin-top: 2rem;
+}
+
+
+/* -------------- Header Styling -------------- */
+
+header {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+}
+
+#recipeTitle {
+    color: var(--white);
+
+    font-size: var(--title2);
+    font-weight: bold;
+}
+
+#infoContainer {
+    color: var(--secondary-color);
+
+    display: flex;
+    gap: 2rem;
+
+    margin-top: 1rem;
+}
+
+#infoContainer>p {
+    font-size: var(--text5);
+}
+
+i {
+    color: var(--white);
+    margin-right: 0.4rem;
+}
+
+
+/* -------------- Ingredients and Instructions Styling -------------- */
+
+#ingredientsContainer,
+#instructionContainer {
+    margin-top: 2rem;
+}
+
+#ingredientsContainer>ul {
+    margin-left: 2rem;
+    list-style: none;
+}
+
+li {
+    margin-top: 1rem;
+}
+
+.title {
+    color: var(--primary-color);
+
+    font-size: var(--title3);
+    font-size: bold;
+}
+
+#instructionContainer>div>p {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+hr {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+
+/* -------------- Tag Content Styling -------------- */
+
+#tagContainer > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tag {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    font-weight: bold;
+
+    padding: 0.6rem;
+}

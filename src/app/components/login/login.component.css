@@ -84,7 +84,9 @@ hr{
 /* ----------------------------------------------------------------------- */
 
 .sideContent {
-    background-color: var(--secondary-color2);
+    background-image: url(https://www.sotc.in/blog/wp-content/uploads/2023/08/foods-in-ladakh.jpg);
+    background-size: fill;
+    background-repeat: no-repeat;
 
     color: var(--primary-color);
     width: 100%;

@@ -10,7 +10,8 @@
     margin-right: 9rem;
 
 }
-.registrationForm{
+
+.registrationForm {
     border-right: 2px solid var(--gray);
 
     padding: 1.25rem;
@@ -19,7 +20,7 @@
     min-width: 22rem;
 }
 
-.registrationForm:last-child{
+.registrationForm:last-child {
     text-align: center;
 }
 
@@ -29,20 +30,22 @@
     color: var(--primary-color);
 }
 
-p > span {
+p>span {
     color: var(--secondary-color);
 }
 
-.inputContainer{
+.inputContainer {
     margin-top: 1.7rem;
 }
 
-.inputContainer > input, .inputContainer > small{
+.inputContainer>input,
+.inputContainer>small {
     display: block;
     width: 100%;
 }
 
-input, button {
+input,
+button {
     border-radius: 2rem;
     border-style: none;
     border: 1.7px solid var(--primary-color);
@@ -65,16 +68,16 @@ button {
     color: var(--white);
 }
 
-button:active{
+button:active {
     background-color: var(--white);
     color: var(--primary-color);
 }
 
-hr{
+hr {
     margin-bottom: 1rem;
 }
 
-.option{
+.option {
     text-align: center;
 }
 
@@ -82,7 +85,9 @@ hr{
 /* ----------------------------------------------------------------------- */
 
 .sideContent {
-    background-color: var(--secondary-color2);
+    background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     color: var(--primary-color);
     width: 100%;
@@ -92,7 +97,7 @@ hr{
     letter-spacing: 1px;
 }
 
-.sideContent > p {
+.sideContent>p {
     text-align: center;
 }
 
@@ -101,3 +106,4 @@ small {
     padding-left: 0.8rem;
     margin-top: 5px;
 }
+
