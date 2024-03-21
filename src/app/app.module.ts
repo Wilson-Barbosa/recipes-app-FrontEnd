@@ -16,11 +16,12 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeDisplayComponent } from './components/recipe-display/recipe-display.component';
 import { RelatedRecipesComponent } from './components/related-recipes/related-recipes.component';
 import { RecipeReviewsComponent } from './components/recipe-reviews/recipe-reviews.component';
 import { UserProfileScreenComponent } from './components/user-profile-screen/user-profile-screen.component';
+import { SearchRecipeComponent } from './components/search-recipe/search-recipe.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +38,14 @@ import { UserProfileScreenComponent } from './components/user-profile-screen/use
     RecipeDisplayComponent,
     RelatedRecipesComponent,
     RecipeReviewsComponent,
-    UserProfileScreenComponent
+    UserProfileScreenComponent,
+    SearchRecipeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
