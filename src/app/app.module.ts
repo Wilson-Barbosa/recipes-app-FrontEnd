@@ -18,37 +18,37 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeDisplayComponent } from './components/recipe-display/recipe-display.component';
-import { RelatedRecipesComponent } from './components/related-recipes/related-recipes.component';
 import { RecipeReviewsComponent } from './components/recipe-reviews/recipe-reviews.component';
 import { UserProfileScreenComponent } from './components/user-profile-screen/user-profile-screen.component';
 import { SearchRecipeComponent } from './components/search-recipe/search-recipe.component';
+import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    LoginComponent,
-    HeaderComponent,
-    NavbarComponent,
-    SigninComponent,
-    HeaderUserSectionComponent,
-    AboutUsComponent,
-    ArticlesComponent,
-    FooterComponent,
-    RecipeDisplayComponent,
-    RelatedRecipesComponent,
-    RecipeReviewsComponent,
-    UserProfileScreenComponent,
-    SearchRecipeComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        LoginComponent,
+        HeaderComponent,
+        NavbarComponent,
+        SigninComponent,
+        HeaderUserSectionComponent,
+        AboutUsComponent,
+        ArticlesComponent,
+        FooterComponent,
+        RecipeDisplayComponent,
+        RecipeReviewsComponent,
+        UserProfileScreenComponent,
+        SearchRecipeComponent,
+        RecipeListComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

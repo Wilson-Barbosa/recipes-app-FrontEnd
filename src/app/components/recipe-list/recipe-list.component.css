@@ -1,0 +1,45 @@
+/* ----------------- Error ----------------- */
+.error-message {
+    color: var(--red);
+    font-size: var(--text3);
+}
+
+img {
+    width: 18rem;
+}
+
+/*----------------- Card and container for the information ----------------- */
+.recipe-card{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+
+.recipe-info {
+    margin-left: 2.5rem;
+}
+
+
+/* ----------------- Specific elements ----------------- */
+.title {
+    font-size: var(--title3);
+    font-weight: bold;
+    color: var(--primary-color);
+
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+
+span {
+    margin-right: 1.5rem;
+    color: var(--primary-color);
+}
+
+
+a {
+    text-decoration: none;
+}
