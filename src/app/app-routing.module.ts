@@ -5,6 +5,7 @@ import { ArticlesComponent } from './components/articles/articles.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { LoginComponent } from './components/login/login.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { RecipeDisplayComponent } from './components/recipe-display/recipe-display.component';
 
 const routes: Routes = [
     { path: "home", component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
     { path: "about-us", component: AboutUsComponent },
     { path: "login", component: LoginComponent },
     { path: "sign-in", component: SigninComponent },
+    { path: "recipe", component: RecipeDisplayComponent},
     { path: "", redirectTo: "home", pathMatch: "full" },      // empty routes
     { path: "**", redirectTo: "home", pathMatch: "full" }     // routes that don't exist
 ];

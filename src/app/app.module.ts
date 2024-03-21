@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RecipeDisplayComponent } from './components/recipe-display/recipe-display.component';
 import { RelatedRecipesComponent } from './components/related-recipes/related-recipes.component';
 import { RecipeReviewsComponent } from './components/recipe-reviews/recipe-reviews.component';
+import { UserProfileScreenComponent } from './components/user-profile-screen/user-profile-screen.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RecipeReviewsComponent } from './components/recipe-reviews/recipe-revie
     FooterComponent,
     RecipeDisplayComponent,
     RelatedRecipesComponent,
-    RecipeReviewsComponent
+    RecipeReviewsComponent,
+    UserProfileScreenComponent
   ],
   imports: [
     BrowserModule,

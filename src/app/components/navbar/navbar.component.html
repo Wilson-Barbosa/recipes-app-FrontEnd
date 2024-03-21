@@ -1,8 +1,11 @@
 <nav>
     <ul>
-        <a routerLink="/home" [routerLinkActive]="['activeOption']"><li>Home</li></a>
-        <a routerLink="/articles" [routerLinkActive]="['activeOption']"><li>Articles</li></a>
+        <a routerLink="home" [routerLinkActive]="['activeOption']"><li>Home</li></a>
+        <a routerLink="articles" [routerLinkActive]="['activeOption']"><li>Articles</li></a>
         <a routerLink="about-us" [routerLinkActive]="['activeOption']"><li>About us</li></a>
+
+        <!-- TODO This is temporary so that I test things better, later I should remove this option -->
+        <a routerLink="recipe" [routerLinkActive]="['activeOption']" ><li>Recipe</li></a>
     </ul>
     <div class="searchContainer">
         <input type="text" placeholder="Search Here">
