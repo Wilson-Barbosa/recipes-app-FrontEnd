@@ -1,20 +1,30 @@
-/* ----------------- Error ----------------- */
+/* ----------------- Error or Response ----------------- */
 .error-message {
     color: var(--red);
     font-size: var(--text3);
 }
 
-img {
-    width: 18rem;
+.no-results {
+    color: var(--primary-color);
+    font-size: var(--text3);
 }
 
 /*----------------- Card and container for the information ----------------- */
+img {
+    width: 16rem;
+}
+
 .recipe-card{
-    border: 1px solid black;
     display: flex;
     align-items: center;
 
-    margin-bottom: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
+
+    background-color: var(--secondary-color3);
+
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
 
@@ -25,7 +35,7 @@ img {
 
 /* ----------------- Specific elements ----------------- */
 .title {
-    font-size: var(--title3);
+    font-size: var(--title2);
     font-weight: bold;
     color: var(--primary-color);
 
@@ -37,9 +47,33 @@ img {
 span {
     margin-right: 1.5rem;
     color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+
 }
 
 
 a {
     text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* ----------------- Sorting and amount ----------------- */
+.quantity-and-sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.recipe-amount {
+    color: var(--primary-color);
+    font-size: var(--text3);
+}
+
+select {
+    padding: 6px;
+    border-radius: 8px;
+    font-size: var(--text6);
 }

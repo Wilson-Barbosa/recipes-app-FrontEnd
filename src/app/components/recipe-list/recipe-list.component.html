@@ -1,16 +1,35 @@
 <div>
 
-    <!-- Error message in case no recipes are found -->
-    <div class="error-message">Sorry, no results were found</div>
+    <!-- Response messages Container -->
+    <div>
+        <!-- If there was an error on the request -->
+        <p class="error-message" *ngIf="errorOnRequest">Sorry, there was an error. Try again.</p>
+
+        <!-- If the request was successful but returned empty -->
+        <p class="no-results" *ngIf="isResponseEmpty">No results were found...</p>
+
+        <div class="quantity-and-sorting" *ngIf="numberOfResults != 0">
+            <!-- Shows the number of results -->
+            <p class="recipe-amount">Found a total of {{ numberOfResults }} results: </p>
+
+            <!-- Sorting the list -->
+            <select>
+                <option value="">Sort Results </option>
+                <option value="1">Sort by Name</option>
+                <option value="2">Sort by Cook Time</option>
+            </select>
+        </div>
+
+    </div>
+
 
     <!-- Recipe Card -->
-    <div class="recipe-card">
-        <img src="assets/images/food-example.png" alt="">
+    <div class="recipe-card" *ngFor="let recipe of recipeList">
+        <img [src]="recipe.photo" [alt]="recipe.title">
         <div class="recipe-info">
-            <p class="title"><a href="">Recipe Title goes here</a></p>
-            <span>User Name</span>
-            <span>Rating: </span>
-            <span><i class="bi bi-stopwatch-fill"></i> 40 Minutes</span>
+            <p class="title"><a href="">{{ recipe.title }}</a></p>
+            <span>Rating: {{ recipe.rating }}</span>
+            <span><i class="bi bi-stopwatch-fill"></i> {{ recipe.cookTime }} Minutes</span>
         </div>
     </div>
 

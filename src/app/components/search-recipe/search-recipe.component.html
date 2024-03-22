@@ -7,11 +7,14 @@
         <input type="text" [(ngModel)]="searchInput" name="saerchInput" placeholder="Enter a recipe">
         <button>Search</button>
         <span>or</span>
-        <button>Display all Recipes</button>
+        <button (click)="executeDisplayAllOnList()">Display all Recipes</button>
     </form>
 
-    <p id="results">Results</p>
-    <hr>
+    <div *ngIf="showResultsTitle">
+        <p id="results">Results</p>
+        <hr>
+    </div>
+
 
     <!-- TODO List of recipes will go here -->
     <app-recipe-list></app-recipe-list>
