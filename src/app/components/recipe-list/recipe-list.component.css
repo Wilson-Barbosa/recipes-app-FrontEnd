@@ -47,10 +47,8 @@ img {
 span {
     margin-right: 1.5rem;
     color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: var(--text4);
     letter-spacing: 0.6px;
-
 }
 
 
@@ -75,5 +73,9 @@ a {
 select {
     padding: 6px;
     border-radius: 8px;
-    font-size: var(--text6);
+    font-size: var(--text7);
+}
+
+option {
+    margin: 2px;
 }

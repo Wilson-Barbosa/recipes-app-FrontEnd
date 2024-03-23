@@ -13,10 +13,15 @@
             <p class="recipe-amount">Found a total of {{ numberOfResults }} results: </p>
 
             <!-- Sorting the list -->
-            <select>
-                <option value="">Sort Results </option>
-                <option value="1">Sort by Name</option>
-                <option value="2">Sort by Cook Time</option>
+            <select (change)="sortRecipes()" [(ngModel)]="sortingOption" name="sortingOption">
+                <!-- TODO maybe I should consider adding icons on the options, unfortunately bootstrap does't work on these here -->
+                <option value="0">-- Sort Results --</option>
+                <option value="1">Name A-Z</option>
+                <option value="2">Name Z-A</option>
+                <option value="3">Rating 0-9</option>
+                <option value="4">Rating 9-0</option>
+                <option value="5">Time 0-9</option>
+                <option value="6">Time 9-0</option>
             </select>
         </div>
 
