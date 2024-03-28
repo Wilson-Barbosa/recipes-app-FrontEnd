@@ -13,16 +13,21 @@ export class HttpRecipeService {
     constructor(private http: HttpClient){}
 
     // Base URL for HTTP requests
-    url:string = "http://localhost:8080/recipes";
+    baseURL:string = "http://localhost:8080/recipes";
 
     // Gets all recipes from the database
     public getAllRecipes(): Observable<IndividualRecipeFromList[]> {
-        return this.http.get<IndividualRecipeFromList[]>(this.url);
+        return this.http.get<IndividualRecipeFromList[]>(this.baseURL);
     }
 
     // Gets a single recipe by it's id
     public getRecipe(id: number): Observable<SingleRecipe>{
-        return this.http.get<SingleRecipe>(`${this.url}/${id}`);
+        return this.http.get<SingleRecipe>(`${this.baseURL}/${id}`);
+    }
+
+    // Get a List of Recipes that match the parameter given (exactly or not)
+    public getMatchingRecipes(keyword: string): Observable<IndividualRecipeFromList[]> {
+        return this.http.get<IndividualRecipeFromList[]>(`${this.baseURL}/search?keyword=${keyword}`);
     }
 
 }

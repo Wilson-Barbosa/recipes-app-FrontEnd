@@ -21,7 +21,7 @@ export class RecipeListComponent {
     isResponseEmpty!: boolean;      // Display a no results found on template
     numberOfResults: number = 0;    // Indicates the amount of recipes fetched
     sortingOption: string = '0';    // Controls the type of sorting in the list (it needs to be a string or else it won't work idk why)
-
+    @Input() keyword: string = '';  // Parameter used to search for a specific recipe(s) by a word
 
     // Sorts the RecipeList based on user criteria
     public sortRecipes(): void {
@@ -42,35 +42,65 @@ export class RecipeListComponent {
         }
     }
 
-
-    // Calls the service to request a list of recipes
-    public displayAll(): void {
-
+    // Resets the component's attributes
+    public resetComponent(): void {
         // These four lines reset all messages and the RecipeList[] before each new search
         this.errorOnRequest = false;
         this.isResponseEmpty = false;
         this.numberOfResults = 0;
         this.recipeList = [];
+    }
+
+
+    // Calls the service to request a list of recipes
+    public displayAll(): void {
+
+        // Clearing the component before new search
+        this.resetComponent();
 
         // Calls the HTTP method on Service
-        this.recipeService.getAllRecipes().subscribe(
-            {
-                next: (data) => {
-                    // Assigns the response to recipeList[]
-                    this.recipeList = data;
-                    this.numberOfResults = data.length;
+        this.recipeService.getAllRecipes().subscribe({
+            next: (data) => {
+                // Assigns the response to recipeList[]
+                this.recipeList = data;
+                this.numberOfResults = data.length;
 
-                    // If there are no results (array empty), but the request was successfull
-                    if (this.recipeList.length == 0) {
-                        this.isResponseEmpty = true;
-                    }
-                },
-                error: () => {
-                     // error on the request
-                    this.errorOnRequest = true;
+                // If there are no results (array empty), but the request was successfull
+                if (this.recipeList.length == 0) {
+                    this.isResponseEmpty = true;
                 }
+            },
+            error: () => {
+                // error on the request
+                this.errorOnRequest = true;
             }
-        );
+        });
     }
+
+    // Calls the service that request a list of matching recipes
+    public getMatchingRecipes(): void {
+
+        // Clearing the component before new search
+        this.resetComponent();
+
+        this.recipeService.getMatchingRecipes(this.keyword).subscribe({
+            next: (data) => {
+                // Assigns the response to recipeList[]
+                this.recipeList = data;
+                this.numberOfResults = data.length;
+
+                // If there are no results (array empty), but the request was successfull
+                if (this.recipeList.length == 0) {
+                    this.isResponseEmpty = true;
+                }
+            },
+            error: () => {
+                // error on the request
+                this.errorOnRequest = true;
+            }
+        });
+    }
+
+
 
 }

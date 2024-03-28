@@ -19,10 +19,17 @@ export class SearchRecipeComponent {
 
     // Method called when the user clicks on 'Display All Recipes'
     public executeDisplayAllOnList(): void {
-
         this.showResultsTitle = true;
-
         this.recipeList.displayAll();
+    }
+
+    // Method called by the user when it clicks on "Search"
+    public sendKeywordToSearch(): void {
+        // Only gets executed if the string is not empty
+        if (this.searchInput != '') {
+            this.showResultsTitle = true;
+            this.recipeList.getMatchingRecipes();
+        }
     }
 
 }

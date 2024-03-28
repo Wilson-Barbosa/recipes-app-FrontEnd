@@ -4,8 +4,8 @@
     <p>Search for a recipe here</p>
     <hr>
     <form>
-        <input type="text" [(ngModel)]="searchInput" name="saerchInput" placeholder="Enter a recipe">
-        <button>Search</button>
+        <input type="text" [(ngModel)]="searchInput" name="saerchInput" placeholder="Enter a word" required>
+        <button (click)="sendKeywordToSearch()">Search</button>
         <span>or</span>
         <button (click)="executeDisplayAllOnList()">Display all Recipes</button>
     </form>
@@ -13,10 +13,11 @@
     <div *ngIf="showResultsTitle">
         <p id="results">Results</p>
         <hr>
+
     </div>
 
 
     <!-- TODO List of recipes will go here -->
-    <app-recipe-list></app-recipe-list>
+    <app-recipe-list [keyword]="searchInput"></app-recipe-list>
 
 </section>
