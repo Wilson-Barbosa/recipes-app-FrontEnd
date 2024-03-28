@@ -1,6 +1,6 @@
 article {
-    margin-right: 5rem;
-    margin-left: 5rem;
+    margin-right: 15rem;
+    margin-left: 2.5rem;
 
     display: flex;
     flex-direction: row;
@@ -18,6 +18,10 @@ article {
     margin-top: 2rem;
 }
 
+.recipeImageContainer>img{
+    max-width: 48rem;
+    max-width: 100%;
+}
 
 /* -------------- Header Styling -------------- */
 
@@ -35,15 +39,11 @@ header {
 
 #infoContainer {
     color: var(--secondary-color);
-
+    font-size: var(--text4);
     display: flex;
     gap: 2rem;
 
     margin-top: 1rem;
-}
-
-#infoContainer>p {
-    font-size: var(--text5);
 }
 
 i {
@@ -61,11 +61,13 @@ i {
 
 #ingredientsContainer>ul {
     margin-left: 2rem;
-    list-style: none;
+    /* list-style: none; */
 }
 
 li {
     margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: var(--text4);
 }
 
 .title {
@@ -75,9 +77,10 @@ li {
     font-size: bold;
 }
 
-#instructionContainer>div>p {
+#instructionContainer>div {
     margin-left: 2rem;
     margin-bottom: 1rem;
+    font-size: var(--text4);
 }
 
 hr {
@@ -88,11 +91,16 @@ hr {
 
 /* -------------- Tag Content Styling -------------- */
 
+#tagContainer{
+    margin-top: 1rem;
+}
+
 #tagContainer > div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: inline;
+}
+
+#tagContainer > hr {
+    margin-bottom: 1.7rem;
 }
 
 .tag {
@@ -102,4 +110,5 @@ hr {
     font-weight: bold;
 
     padding: 0.6rem;
+    margin-right: 1rem;
 }

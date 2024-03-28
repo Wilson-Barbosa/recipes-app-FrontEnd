@@ -32,7 +32,7 @@
     <div class="recipe-card" *ngFor="let recipe of recipeList">
         <img [src]="recipe.photo" [alt]="recipe.title">
         <div class="recipe-info">
-            <p class="title"><a href="">{{ recipe.title }}</a></p>
+            <p class="title"><a [routerLink]="'/recipes/' + recipe.id" target="_blank">{{ recipe.title }}</a></p>
             <span>Rating: {{ recipe.rating }}</span>
             <span><i class="bi bi-stopwatch-fill"></i> {{ recipe.cookTime }} Minutes</span>
         </div>

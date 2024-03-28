@@ -15,8 +15,9 @@ const routes: Routes = [
     { path: "login", component: LoginComponent },
     { path: "sign-in", component: SigninComponent },
     { path: "search-recipes", component: SearchRecipeComponent},
+    { path: "recipes/:id", component: RecipeDisplayComponent},
     { path: "", redirectTo: "home", pathMatch: "full" },      // empty routes
-    { path: "**", redirectTo: "home", pathMatch: "full" }     // routes that don't exist
+    { path: "**", redirectTo: "home", pathMatch: "full" }     // TODO change to a 404page later; routes that don't exist
 ];
 
 @NgModule({

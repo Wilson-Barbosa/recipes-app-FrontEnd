@@ -16,6 +16,7 @@ export class RecipeListComponent {
     // Array that contains a list of recipes from the database
     recipeList: IndividualRecipeFromList[] = [];
 
+
     errorOnRequest!: boolean;       // Controls if an error message will be display or not
     isResponseEmpty!: boolean;      // Display a no results found on template
     numberOfResults: number = 0;    // Indicates the amount of recipes fetched
@@ -41,6 +42,7 @@ export class RecipeListComponent {
         }
     }
 
+
     // Calls the service to request a list of recipes
     public displayAll(): void {
 
@@ -63,13 +65,12 @@ export class RecipeListComponent {
                         this.isResponseEmpty = true;
                     }
                 },
-                error: () => { // error on the request
+                error: () => {
+                     // error on the request
                     this.errorOnRequest = true;
                 }
             }
         );
     }
-
-
 
 }

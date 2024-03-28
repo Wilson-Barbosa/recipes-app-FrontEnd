@@ -12,15 +12,21 @@
     </form>
 
 
-    <!-- List of reviews -->
-    <div class="userReview">
-        <div>
-            <i class="bi bi-person-circle"></i>
-            <p>Luna Star</p>
-            <p>Rating</p>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil odio soluta temporibus ea natus libero tenetur totam, voluptatem deserunt quas?</p>
-    </div>
 
+    <!-- List of reviews -->
+    <div class="reviews-container"  *ngIf="reviews.length !=0; else noReviews">
+        <div class="single-user-review" *ngFor="let review of reviews">
+            <div>
+                <img [src]="review.author.userPhoto" [alt]="review.author.username">
+                <a>{{ review.author.username }}</a>
+                <p>Rating: {{ review.rating }}</p>
+            </div>
+            <p id="comment"><span>“</span> {{ review.comment }} <span>”</span></p>
+        </div>
+    </div>
+    <!-- No Reviews Message -->
+    <ng-template  #noReviews>
+        <p class="noReviews">There are no reviews for this recipe yet! Be the first to write one!</p>
+    </ng-template>
 
 </section>
