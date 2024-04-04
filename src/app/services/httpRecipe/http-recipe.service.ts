@@ -13,7 +13,7 @@ export class HttpRecipeService {
     constructor(private http: HttpClient){}
 
     // Base URL for HTTP requests
-    baseURL:string = "http://localhost:8080/recipes";
+    baseURL:string = "http://localhost:8080/api/v1/recipes";
 
     // Gets all recipes from the database
     public getAllRecipes(): Observable<IndividualRecipeFromList[]> {
