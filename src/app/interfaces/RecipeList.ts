@@ -1,4 +1,4 @@
-export interface IndividualRecipeFromList {
+export interface RecipeList {
     id: string;
     title: string;
     rating: number;

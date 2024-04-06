@@ -1,0 +1,53 @@
+/* ------------------ Backdrop for dimming effect ------------------ */
+.modal-backdrop {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(143, 143, 143, 0.5);
+}
+
+/* ------------------ Modal screen selectors ------------------ */
+.modal-container {
+    color: var(--white);
+    box-shadow: 4px 4px 10px var(--gray);
+
+    text-align: center;
+
+    width: fit-content;
+    padding: 2em;
+
+    border-radius: 13px;
+
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+p {
+    font-size: var(--text3);
+    padding: 0.2em;
+}
+
+i {
+    font-size: 4rem;
+}
+
+div {
+    margin: 0.5em;
+}
+
+a {
+    color: var(--white);
+}
+
+.error {
+    background-color: var(--red);
+}
+
+.success {
+    background-color: var(--green);
+}

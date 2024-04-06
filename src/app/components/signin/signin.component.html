@@ -4,13 +4,14 @@
         <p class="logTitle"><span>S</span>ign In</p>
         <form id="loginForm" [formGroup]="signInFormGroup" (ngSubmit)="saveUser()">
 
-            <!-- Name input -->
+            <!-- Username input -->
             <div class="inputContainer">
-                <input type="text" placeholder="name" formControlName="name" required>
+                <input type="text" placeholder="username" formControlName="username" required>
                 <div *ngIf="signInFormGroup.invalid && registerWasClicked">
-                    <small *ngIf="name.errors?.['required']">Name is required</small>
-                    <small *ngIf="name.errors?.['minlength']">Must have at least 3 characters</small>
+                    <small *ngIf="username.errors?.['required']">Userame is required</small>
+                    <small *ngIf="username.errors?.['minlength']">Must have at least 3 characters</small>
                 </div>
+                <small *ngIf="usernameTaken">Username already registered</small>
             </div>
 
             <!-- Email input -->
@@ -20,6 +21,7 @@
                     <small *ngIf="email.errors?.['required']">Email is required</small>
                     <small *ngIf="email.errors?.['email']">Email format invalid</small>
                 </div>
+                <small *ngIf="emailTaken">Email already registered</small>
             </div>
 
             <!-- Password input -->
@@ -34,7 +36,7 @@
             <!-- Repeated Password input -->
             <div class="inputContainer">
                 <input type="password" placeholder="repeat password" formControlName="repeatedPassword" required>
-                <div *ngIf="signInFormGroup.invalid && registerWasClicked">
+                <div *ngIf="registerWasClicked">
                     <small *ngIf="!doPasswordsMatch()">Passwords don't match</small>
                 </div>
             </div>
@@ -48,6 +50,9 @@
     <section class="sideContent">
         <p>Create your account</p>
     </section>
+
+    <!-- Modal to display success or failure when registering -->
+    <app-modal *ngIf="showModal" (closeModalEvent)="closeModal($event)" ></app-modal>
 
 </div>
 

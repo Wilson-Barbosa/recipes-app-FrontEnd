@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
-import { IndividualRecipeFromList } from 'src/app/interfaces/IndividualRecipeFromList';
+import { RecipeList } from 'src/app/interfaces/RecipeList';
 import { HttpRecipeService } from 'src/app/services/httpRecipe/http-recipe.service';
 
 @Component({
@@ -12,16 +12,16 @@ export class RecipeListComponent {
     // Injecting the HttpService
     constructor(private recipeService: HttpRecipeService) { }
 
+    @Input() keyword: string = '';  // Parameter used to search for a specific recipe(s) by a word
 
     // Array that contains a list of recipes from the database
-    recipeList: IndividualRecipeFromList[] = [];
-
+    recipeList: RecipeList[] = [];
 
     errorOnRequest!: boolean;       // Controls if an error message will be display or not
     isResponseEmpty!: boolean;      // Display a no results found on template
     numberOfResults: number = 0;    // Indicates the amount of recipes fetched
     sortingOption: string = '0';    // Controls the type of sorting in the list (it needs to be a string or else it won't work idk why)
-    @Input() keyword: string = '';  // Parameter used to search for a specific recipe(s) by a word
+
 
     // Sorts the RecipeList based on user criteria
     public sortRecipes(): void {
@@ -45,6 +45,7 @@ export class RecipeListComponent {
     // Resets the component's attributes
     public resetComponent(): void {
         // These four lines reset all messages and the RecipeList[] before each new search
+        // This is necessary so the error messages will disappear when a new search is performed
         this.errorOnRequest = false;
         this.isResponseEmpty = false;
         this.numberOfResults = 0;

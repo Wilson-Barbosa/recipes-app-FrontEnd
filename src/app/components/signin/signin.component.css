@@ -89,11 +89,10 @@ hr {
 /* ----------------------------------------------------------------------- */
 
 .sideContent {
-    background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg);
-    background-repeat: no-repeat;
+    background-image: url(https://www.mowglistreetfood.com/wp-content/uploads/2023/01/Landing_image_Desktop.jpg);
     background-size: cover;
 
-    color: var(--primary-color);
+    color: var(--white);
     width: 100%;
 
     font-size: var(--title1);

@@ -22,6 +22,7 @@ import { RecipeReviewsComponent } from './components/recipe-reviews/recipe-revie
 import { UserProfileScreenComponent } from './components/user-profile-screen/user-profile-screen.component';
 import { SearchRecipeComponent } from './components/search-recipe/search-recipe.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import { RecipeListComponent } from './components/recipe-list/recipe-list.compon
         RecipeReviewsComponent,
         UserProfileScreenComponent,
         SearchRecipeComponent,
-        RecipeListComponent
+        RecipeListComponent,
+        ModalComponent
     ],
     imports: [
         BrowserModule,
